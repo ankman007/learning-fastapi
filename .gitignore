@@ -1,0 +1,44 @@
+# Python-related
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env1/
+env/
+.env
+
+# Package distribution
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# IDE settings
+.vscode/
+.idea/
+
+# Test outputs
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Local configuration files
+*.local
+
+# Pytest
+.pytest_cache/
+
+# Miscellaneous
+*.sqlite3
+*.db
+*.log
+*.pot
+*.mo
+*.iml
