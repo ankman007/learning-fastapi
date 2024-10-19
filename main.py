@@ -1,35 +1,22 @@
 from fastapi import FastAPI
+import json
 
-fake_db = {
-    "users": {
-        "user1": {
-            "username": "admin",
-            "password": "admin", 
-            "name": "Ankit",
-            "age": 11,
-        },
-        "user2": {
-            "username": "btn",
-            "password": "btn",
-            "name": "Jamun",
-            "age": 250,
-        },
-    }
-}
+with open('data.json', 'r') as file:
+    fake_db = json.load(file)
 
 app = FastAPI()
 
 @app.get("/")
-def hello_world():
+def hello_world() -> dict:
     return {"message": "Hello World"}
 
-@app.get("/login")  
-def login(username: str, password: str):
-    user = fake_db["users"].get(username)
-    if user and user["password"] == password:  
-        return {
-            "message": "User logged in successfully",
-            "user_info": {"name": user["name"], "age": user["age"]}
-        }
-    else:
-        return {"message": "Login Failed"}
+@app.get("/login")
+def login(username: str, password: str) -> dict:
+    for user_id, user_data in fake_db["users"].items():
+        if user_data["username"] == username and user_data["password"] == password:
+            return {
+                "message": "User logged in successfully",
+                "user_info": {"name": user_data["name"], "age": user_data["age"], "id": user_id}
+            }
+
+    return {"message": "Login Failed"}
