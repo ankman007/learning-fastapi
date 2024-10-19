@@ -1,0 +1,95 @@
+{
+    "users": {
+        "user1": {
+            "id": 1,
+            "username": "admin",
+            "password": "admin",
+            "name": "Ankit",
+            "age": 11
+        },
+        "user2": {
+            "id": 2,
+            "username": "btn",
+            "password": "btn",
+            "name": "Jamun",
+            "age": 250
+        }
+    },
+    "bands": {
+        "band1": {
+            "id": 1,
+            "name": "The Kinks",
+            "genre": "Rock",
+            "albums": [
+                {
+                    "title": "Face to Face",
+                    "release_year": 1966
+                },
+                {
+                    "title": "Lola Versus Powerman and the Moneygoround, Part One",
+                    "release_year": 1970
+                }
+            ]
+        },
+        "band2": {
+            "id": 2,
+            "name": "The Beatles",
+            "genre": "Rock",
+            "albums": [
+                {
+                    "title": "Abbey Road",
+                    "release_year": 1969
+                },
+                {
+                    "title": "Sgt. Pepper's Lonely Hearts Club Band",
+                    "release_year": 1967
+                }
+            ]
+        },
+        "band3": {
+            "id": 3,
+            "name": "Nirvana",
+            "genre": "Grunge",
+            "albums": [
+                {
+                    "title": "Nevermind",
+                    "release_year": 1991
+                },
+                {
+                    "title": "In Utero",
+                    "release_year": 1993
+                }
+            ]
+        },
+        "band4": {
+            "id": 4,
+            "name": "Radiohead",
+            "genre": "Alternative Rock",
+            "albums": [
+                {
+                    "title": "OK Computer",
+                    "release_year": 1997
+                },
+                {
+                    "title": "Kid A",
+                    "release_year": 2000
+                }
+            ]
+        },
+        "band5": {
+            "id": 5,
+            "name": "The Rolling Stones",
+            "genre": "Rock",
+            "albums": [
+                {
+                    "title": "Let It Bleed",
+                    "release_year": 1969
+                },
+                {
+                    "title": "Sticky Fingers",
+                    "release_year": 1971
+                }
+            ]
+        }
+    }
+}
