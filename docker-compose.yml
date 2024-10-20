@@ -10,3 +10,10 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload  
+    depends_on:
+      - redis
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
